@@ -1,0 +1,142 @@
+$mainRedColor: #FF161A;
+$mainBlueColor: #4169E1;
+$mainTextSize: 20px;
+$mainFontFamily: "Verdana";
+$textWhiteColor: #FFFAFA;
+$standartWidth: 300px;
+
+%template_for_lists{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.landingPage {
+  font-family: $mainFontFamily;
+  text-align: center;
+  height: 100%;
+  min-width: 1000px;
+  display: block;
+  margin-top: -40px;
+  width: 100%;
+  @media screen and (min-width: 320px) and (max-width: 720px) {
+    min-width: 320px;
+    width: 100%;
+  }
+
+  &__sideBar {
+    float: left;
+    background: red;
+    color: $textWhiteColor;
+    text-align: center;
+    width: 300px;
+    height: 100%;
+    @media screen and (min-width: 320px) and (max-width: 720px) {
+      min-width: 320px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &__logo {
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+
+    &__slogan {
+      text-transform: uppercase;
+      font-size: $mainTextSize*2;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    &__options{
+      width: 250px;
+      font-size: $mainTextSize - 5px;
+      vertical-align: middle;
+      @media screen and (min-width: 320px) and (max-width: 720px){
+        margin: 0 auto;
+      }
+
+
+      &__item{
+        width: 170px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &__icons{
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__content {
+    background-image: linear-gradient(#9CDAFF 10%, $textWhiteColor 50%, #9CDAFF 100%);
+    color: $mainBlueColor;
+    @media screen and (min-width: 320px) and (max-width: 720px) {
+      min-width: 320px;
+      width: 100%;
+    }
+
+    &__features {
+      @extend %template_for_lists;
+      padding: 50px;
+      font-size: $mainTextSize;
+      text-transform: uppercase;
+      font-weight: bold;
+      @media screen and (min-width: 320px) and (max-width: 720px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 20px 10px 20px;
+      }
+    }
+
+    &__contacts{
+      @extend %template_for_lists;
+      padding-right: 100px;
+      padding-left: 100px;
+      font-size: $mainTextSize - 5px;
+      color: $mainBlueColor;
+      margin-bottom: 20px;
+      @media screen and (min-width: 320px) and (max-width: 720px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+      &__item{
+        @media screen and (min-width: 320px) and (max-width: 720px) {
+          align-self: center;
+        }
+      }
+      & a {
+        color: $mainRedColor;
+        font-weight: bold;
+      }
+    }
+    &__footer{
+      padding: 10px;
+    }
+  }
+}
+
+h1{
+  color: $mainRedColor;
+  font-size: $mainTextSize*3;
+}
+h2{
+  color: $mainBlueColor;
+  font-size: $mainTextSize*2;
+
+}
+ul{
+  text-align: left;
+  list-style-type: none;
+}
+
+li{
+  margin: 20px 0 20px;
+}

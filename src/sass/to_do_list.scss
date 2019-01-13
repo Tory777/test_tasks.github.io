@@ -1,0 +1,33 @@
+.toDoList {
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+    background: lavender;
+  &__form{
+    margin: 15px;
+
+  }
+
+  &__action {
+
+    &__add {
+      margin: 0 auto;
+      margin-bottom: 10px;
+      width: 100px;
+      background: lightseagreen;
+      border-radius: 5px;
+
+
+      &[data-disable='true'] {
+        opacity: 0.5;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.records__notFound{
+  color: dimgrey;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 20px;
+}

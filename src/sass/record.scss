@@ -1,0 +1,19 @@
+.record{
+
+  &__name{
+    width: 100px;
+  }
+
+  &__date{
+    width: 100px;
+  }
+  &__description{
+    width: 300px;
+  }
+  &__name, &__date, &__description{
+    overflow: hidden;
+    padding: 2px;
+    text-overflow: ellipsis;
+  }
+
+}
